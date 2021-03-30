@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Libreria</h3>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre libro</th>
+              <th>Autor</th>
+              <th>Editorial</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let libreria of librerias" class="text-center">
+              <td>{{libreria.id}}</td>
+              <td>{{libreria.nombreLib}}</td>
+              <td>{{libreria.autor}}</td>
+              <td>{{libreria.editorial}}</td>
+              <td>
+                <button (click)="Editar(libreria)" class="btn btn-warning">Editar</button>
+                <button (click)="Borrar(libreria)" class="btn btn-danger">Borrar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
